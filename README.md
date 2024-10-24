@@ -1,5 +1,5 @@
-**Cheddar's Adventure**
-
+**[[Cheddar's Adventure]]**
+**[~Work in Progress~]**
 Welcome to Cheddar's Adventure, a portfolio project that showcases a playable 2D game inspired by classics like Terraria, Stardew Valley, and older Pokémon games. Join Cheddar, my adorable puppy, as he explores a charming farm and urban neighborhood!
 
 
