@@ -1,0 +1,18 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black; /* CRT background */
+    color: #00ff00; /* Green text */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat */
+}
+
+canvas {
+    display: block; /* Prevents padding/margins around the canvas */
+}
+
+
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
