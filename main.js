@@ -1,5 +1,3 @@
-import Phaser from 'phaser'
-
 const config = {
     type: Phaser.AUTO,
     width: window.innerWidth,
@@ -117,5 +115,6 @@ const game = new Phaser.Game(config);
 
 // Add the game scene immediately so it is available when we want to switch to it
 game.scene.add('gameScene', gameScene);
+
 
 
