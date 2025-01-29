@@ -15,12 +15,6 @@ header {
   color: white;
 }
 
-/* Style the name/logo */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
 /* Style the navigation */
 .nav-links {
   list-style: none;
