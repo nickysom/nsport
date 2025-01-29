@@ -28,6 +28,7 @@ Technologies Used:
     CSS3
     JavaScript
     Phaser.js
+    Visual Studio Code 2
     Git & GitHub for version control
 
 
