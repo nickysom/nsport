@@ -8,25 +8,84 @@
     <title>N.S. Portfolio Website</title>
 </head>
 
+<!-- Header/UI -->
 <header>
     <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#game">Game</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#game">Game</a></li>
         </ul>
-      </nav>
+    </nav>
 </header>
 
+<!-- Home -->
 <section id="home">
     <h1>Welcome to My Portfolio!</h1>
     <p>I'm Nicky Som, an aspiring IT Project Manager</p>
-</section><p></p>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a first-generation college student at Penn State University pursuing a degree in Enterprise, Technology, and Integration (ETI), with a focus on IT and Business Integration. I have lived in York, PA, my entire life. My family is from Southeast Asia, specifically Cambodia. I am fluent in both English and Khmer. Outside of my academics, I am passionate about photography, video games, web design, technology, and exploring different hobbies. I enjoy spending time with family, friends, and my corgi puppy at home. </p>
 </section>
+<p></p>
+
+<!-- About Info -->
+<section id="about">
+
+    <h2>About Me</h2>
+    <p>I am a first-generation college student at Penn State University pursuing a degree in Enterprise, Technology, and
+        Integration (ETI), with a focus on IT and Business Integration. I have lived in York, PA, my entire life. My
+        family is from Southeast Asia, specifically Cambodia. I am fluent in both English and Khmer. Outside of my
+        academics, I am passionate about photography, video games, web design, technology, and exploring different
+        hobbies. I enjoy spending time with family, friends, and my corgi puppy at home. </p>
+
+</section>
+
+<!-- Portfolio Records -->
+<section id="portfolio">
+    <iframe src="assets/resumes/som_resume.pdf">
+        Your browser does not support viewing PDFs. <a href="assets/resumes/som_resume.pdf">Download the PDF</a>.
+    </iframe>
+
+    <img src="assets/images/skills_cert.jpg" alt="PA Skills Cert">
+    <img src="assets/images/tech_cert.jpg" alt="York County Cert">
+    <img src="assets/images/spot_award.jpg" alt="Spotlight Award">
+</section>
+
+<!-- Contact Information -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Name: Nicky Som</p>
+    <p>Email: <a href="mailto:Nxs556@psu.edu">Nxs556@psu.edu</a></p>
+    <p>Phone: 717-894-4789</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/somnicky" target="_blank">linkedin.com/in/somnicky</a>
+    <p>
+    <p>GitHub: <a href="https://github.com/nickysom" target="_blank">github.com/nickysom</a></p>
+
+    <!-- Contact Form -->
+    <h3>Send Me a Message!</h3>
+    <form action="mailto:Nxs556@psu.edu" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Emai Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Game Insert -->
+<section id="game">
+    Place Holder
+</section>
+
+<!-- Footer With Copyright -->
+<footer id="copy">
+    <p>&copy; 2024 Nicky Som. All Rights Reserved.</p>
+</footer>
+
 </html>
