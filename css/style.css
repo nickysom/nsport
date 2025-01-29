@@ -1,45 +1,144 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Style the header */
+/* Header Styling */
 header {
   display: flex;
-  justify-content: space-between;  /* Pushes items apart */
+  justify-content: space-between; /* Pushes name to the left and menu to the right */
   align-items: center;
-  padding: 20px;
-  background-color: #333;  /* Dark background */
-  color: white;
+  padding: 20px 50px;
+  background-color: #2A2A2A; 
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures header priority */
 }
 
-/* Style the name/logo */
+/* Banner Name Logo (Left Side) */
 .logo {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
+  color: #E64398;
+  font-family: "stop-mn", sans-serif;
 }
 
-/* Style the navigation */
-.nav-links {
+/* Navigation Menu */
+nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;  /* Adds space between items */
+  gap: 25px;
 }
 
-.nav-links li {
-  display: inline;
+nav ul li {
+  position: relative;
+  display: inline-block;
 }
 
-.nav-links a {
+/* Navigation Links */
+nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #E3E2DF;
   font-size: 18px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 20px;
   transition: color 0.3s ease-in-out;
+  position: relative;
+  z-index: 2; /* Text is on top of the oval */
 }
 
-.nav-links a:hover {
-  color: #f4a261; /* Change color on hover */
+/* Oval Hover Effect */
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0%;
+  height: 0%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent oval */
+  border-radius: 50px; /* Creates the oval shape */
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1; /* Sits behind the text */
+}
+
+/* Expand the oval on hover */
+nav ul li a:hover::before {
+  width: 120%; /* Controls oval width */
+  height: 2.5em; /* Controls oval height */
+  opacity: 1;
+}
+
+/* Change text color on hover */
+nav ul li a:hover {
+  color: #F172A1; /* Matches your hover color */
+}
+
+/* Image Styling */
+img {
+  display: block;
+  width: 300px; /* Adjust as needed */
+  height: auto; /* Maintains aspect ratio */
+  margin: 10px auto; /* Centers the images */
+}
+
+/* ------------------ MOBILE RESPONSIVE DESIGN ------------------ */
+/* ------------------ MOBILE RESPONSIVE DESIGN ------------------ */
+@media (max-width: 768px) {
+  /* Header Layout for Mobile */
+  header {
+    flex-direction: row; /* Keep logo and menu inline */
+    justify-content: space-between; /* Spread logo and menu */
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* Adjust logo */
+  .logo {
+    font-size: 26px;
+    text-align: left;
+  }
+
+  /* Hide the regular menu on mobile */
+  nav ul {
+    display: none; /* Hide menu until toggled */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Below header */
+    left: 0;
+    width: 100%;
+    background: #2A2A2A;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* Show menu when active */
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Menu items */
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* Hamburger Icon */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    color: #E3E2DF;
+  }
 }
 
