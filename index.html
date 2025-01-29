@@ -14,7 +14,7 @@
 <!-- Header/UI -->
 <header id="wrapper">
     <div class="logo">Nicky Som's Portfolio</div> <!-- Name on the left -->
-    <div class="menu-toggle">☰</div> <!-- Hamburger Icon -->
+    <div class="menu-toggle"></div> <!-- Hamburger Icon -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -48,9 +48,17 @@
 
 <!-- Portfolio Records -->
 <section id="portfolio">
-    <iframe src="assets/resumes/som_resume.pdf">
-        Your browser does not support viewing PDFs. <a href="assets/resumes/som_resume.pdf">Download the PDF</a>.
-    </iframe>
+
+<!-- PDF Display -->
+<section id="pdf-section">
+    <canvas id="pdf-canvas"></canvas>
+    <p><a href="assets/resumes/som_resume.pdf" target="_blank">View Full PDF</a></p>
+</section>
+
+<!-- Link to External JavaScript -->
+<script src="js/pdf-viewer.js"></script>
+ 
+    
 
     <img src="assets/images/skills_cert.jpg" alt="PA Skills Cert">
     <img src="assets/images/tech_cert.jpg" alt="York County Cert">
