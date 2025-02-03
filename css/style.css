@@ -18,6 +18,11 @@ header {
   z-index: 1000; /* Ensures header priority */
 }
 
+/* Prevent Content from Overlapping Header */
+body {
+  padding-top: 80px; /* Adjust based on header height */
+}
+
 /* Banner Name Logo (Left Side) */
 .logo {
   font-size: 34px;
@@ -57,7 +62,7 @@ nav ul li a::before {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 0%;
+  max-width: fit-content; /* Prevents stretching */
   height: 0%;
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent oval */
   border-radius: 50px; /* Creates the oval shape */
@@ -69,8 +74,8 @@ nav ul li a::before {
 
 /* Expand the oval on hover */
 nav ul li a:hover::before {
-  width: 120%; /* Controls oval width */
-  height: 2.5em; /* Controls oval height */
+  width: 120px; /* Fixed width to prevent stretching */
+  height: 2em; /* Adjusted to prevent overflow */
   opacity: 1;
 }
 
@@ -82,12 +87,11 @@ nav ul li a:hover {
 /* Image Styling */
 img {
   display: block;
-  width: 300px; /* Adjust as needed */
+  width: 750px; /* Adjust as needed */
   height: auto; /* Maintains aspect ratio */
   margin: 10px auto; /* Centers the images */
 }
 
-/* ------------------ MOBILE RESPONSIVE DESIGN ------------------ */
 /* ------------------ MOBILE RESPONSIVE DESIGN ------------------ */
 @media (max-width: 768px) {
   /* Header Layout for Mobile */
@@ -98,6 +102,14 @@ img {
     padding: 10px 20px;
   }
 
+  /* Show the hamburger icon ONLY on mobile */
+  .menu-toggle {
+    display: block !important; /* Ensures it's shown */
+    cursor: pointer;
+    font-size: 28px;
+    color: #E3E2DF;
+  }
+
   /* Adjust logo */
   .logo {
     font-size: 26px;
@@ -106,39 +118,53 @@ img {
 
   /* Hide the regular menu on mobile */
   nav ul {
-    display: none; /* Hide menu until toggled */
+    display: none;
     flex-direction: column;
+    align-items: center; /* Centered menu */
     position: absolute;
-    top: 60px; /* Below header */
+    top: 50px; /* Below header */
     left: 0;
     width: 100%;
     background: #2A2A2A;
     padding: 10px 0;
     text-align: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
   }
 
   /* Show menu when active */
   nav ul.active {
     display: flex;
+    opacity: 1;
   }
 
-  /* Menu items */
+  /* Remove the white line between menu items */
   nav ul li {
     width: 100%;
+    border: none !important; /* Removes any automatic borders */
+    margin: 0 !important; /* Removes any unwanted spacing */
+    padding: 0 !important; /* Removes extra padding */
   }
 
+  /* Adjust anchor links */
   nav ul li a {
     display: block;
-    padding: 10px;
+    padding: 15px 20px; /* Increased touch area */
     font-size: 18px;
+    border-bottom: none !important; /* Ensure no bottom border */
   }
 
-  /* Hamburger Icon */
-  .menu-toggle {
+  /* Ensure hover bubble effect works on mobile */
+  nav ul li a::before {
+    width: fit-content; /* Prevents oversized hover effect */
+    height: 2em;
+    opacity: 1;
+  }
+
+  img {
     display: block;
-    cursor: pointer;
-    font-size: 28px;
-    color: #E3E2DF;
+    width: 350px; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin: 10px auto; /* Centers the images */
   }
 }
-
