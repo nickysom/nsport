@@ -156,11 +156,12 @@ nav ul li a:hover {
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Moves section slightly to the left */
-  gap: 30px; /* Adds space between image and text */
+  justify-content: center; /* Centers the content */
+  gap: 30px; /* Keeps spacing between image and text */
   max-width: 900px; /* Keeps it compact */
-  margin: 40px auto 40px 80px; /* Moves it slightly left */
+  margin: 40px auto; /* Centers the entire section */
   padding: 20px;
+  text-align: center;
 }
 
 /* Headshot Image Styling */
@@ -177,6 +178,11 @@ nav ul li a:hover {
 .about-text {
   max-width: 500px;
   line-height: 1.6;
+  text-align: left;
+}
+
+.about-text h2 {
+  text-align: left; /* Ensures the title is left-aligned */
 }
 
 
